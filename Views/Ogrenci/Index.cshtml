@@ -1,0 +1,69 @@
+﻿@model IEnumerable<UygulamaSınav.Models.Ogrenci>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Öğrenciler</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt", "Create",null,new {@class="btn btn-success" })
+</p>
+<table class="table"">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenciName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenciSurName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenciTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenciAdres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenciTelefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AldigiEgitim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BasariDurumu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OgrenciName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OgrenciSurName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OgrenciTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OgrenciAdres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OgrenciTelefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AldigiEgitim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BasariDurumu)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.OgrenciID },new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Detay", "Details", new { id=item.OgrenciID },new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.OgrenciID },new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,74 @@
+﻿@model UygulamaSınav.Models.Ogrenci
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ogrenci</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciSurName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciSurName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciAdres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciAdres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AldigiEgitim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AldigiEgitim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BasariDurumu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasariDurumu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OgrenciID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
